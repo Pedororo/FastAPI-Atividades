@@ -1,35 +1,88 @@
-# Sistema de Vendas Online - API com FastAPI
+# Sistema de Vendas de Ração para Pets
 
-Esta é uma API simples para gerenciamento de produtos em um sistema de vendas online. A API foi desenvolvida utilizando o framework FastAPI e possui funcionalidades básicas para criar, listar, buscar, atualizar e excluir produtos.
+Este projeto é um sistema simples de vendas de ração para pets utilizando o **FastAPI**. Ele simula a gestão de produtos (ração), clientes e pedidos, permitindo criar, atualizar, listar e remover produtos, clientes e pedidos. A seguir, estão descritas as principais funcionalidades da API.
 
----
+## Endpoints Disponíveis
 
-## Funcionalidades
+### 1. Produtos
+- **GET /produtos/{produto_id}**
+  - Retorna as informações de um produto específico pelo seu `produto_id`.
+- **POST /produtos**
+  - Cria um novo produto.
+  - **Body** (JSON):
+    ```json
+    {
+      "nome": "Ração para Cão Adulto",
+      "descricao": "Ração premium para cães adultos",
+      "preco": 129.99,
+      "estoque": 100,
+      "peso_kg": 5,
+      "tipo": "Cão"
+    }
+    ```
+- **PUT /produtos/{produto_id}**
+  - Atualiza as informações de um produto específico pelo seu `produto_id`.
+  - **Body** (JSON):
+    ```json
+    {
+      "nome": "Ração para Cão Adulto",
+      "descricao": "Nova descrição",
+      "preco": 139.99,
+      "estoque": 120,
+      "peso_kg": 5,
+      "tipo": "Cão"
+    }
+    ```
+- **DELETE /produtos/{produto_id}**
+  - Remove um produto específico pelo seu `produto_id`.
 
-- **Listar produtos**: Recupera todos os produtos cadastrados.
-- **Buscar produto por ID**: Retorna os detalhes de um produto específico.
-- **Pesquisar produtos por nome**: Filtra produtos pelo nome.
-- **Criar novo produto**: Adiciona um produto ao sistema.
-- **Atualizar produto**: Modifica os dados de um produto existente.
-- **Excluir produto**: Remove um produto do sistema.
+### 2. Clientes
+- **GET /clientes**
+  - Retorna a lista de todos os clientes.
+- **GET /clientes/{cliente_id}**
+  - Retorna as informações de um cliente específico pelo seu `cliente_id`.
+- **POST /clientes**
+  - Cria um novo cliente.
+  - **Body** (JSON):
+    ```json
+    {
+      "nome": "Pedro Henrique",
+      "endereco": "Rua Exemplo, 123",
+      "telefone": "88999981853"
+    }
+    ```
+- **PUT /clientes/{cliente_id}**
+  - Atualiza as informações de um cliente específico pelo seu `cliente_id`.
+  - **Body** (JSON):
+    ```json
+    {
+      "nome": "Pedro Henrique Pereira Facundo",
+      "endereco": "Rua Alterada, 456",
+      "telefone": "88999981853"
+    }
+    ```
+- **DELETE /clientes/{cliente_id}**
+  - Remove um cliente específico pelo seu `cliente_id`.
 
----
-
-## Requisitos
-
-- Python 3.8 ou superior.
-- Dependências do projeto:
-  - `fastapi`
-  - `uvicorn`
-
----
+### 3. Pedidos
+- **POST /pedidos**
+  - Cria um novo pedido.
+  - **Body** (JSON):
+    ```json
+    {
+      "cliente_id": 1,
+      "itens": [
+        {"produto_id": 1, "quantidade": 2},
+        {"produto_id": 2, "quantidade": 1}
+      ],
+      "endereco_entrega": "Rua de Entrega, 789"
+    }
+    ```
+- **GET /pedidos**
+  - Retorna a lista de todos os pedidos.
 
 ## Instalação
 
-1. Clone este repositório:
+1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/Pedororo/FastAPI-Atividades
-   cd sistema-vendas-online
-
-##Postman
-https://web.postman.co/workspace/409f7473-f1fb-4527-877f-988c4ecc66bd/collection/40242821-0dd90384-710d-4683-8034-dd0f233c0025
+   git clone https://github.com/seu-usuario/sistema-racao-pets.git
