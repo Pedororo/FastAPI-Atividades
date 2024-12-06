@@ -87,11 +87,11 @@ Este projeto é um sistema simples de vendas de ração para pets utilizando o *
    ```bash
    [git clone https://github.com/seu-usuario/sistema-racao-pets.git](https://github.com/Pedororo/FastAPI-Atividades)
 
-   ## Testando a API com Postman
+## Testando a API com Postman
 
 Para facilitar o teste da API, você pode usar o **Postman**. Para isso, basta importar a coleção de requisições.
 
-1. **Baixe o arquivo de coleção do Postman** [aqui](<[COLECAO_DO_POSTMAN_URL](https://web.postman.co/workspace/409f7473-f1fb-4527-877f-988c4ecc66bd/collection/40242821-0dd90384-710d-4683-8034-dd0f233c0025)>).
+1. **Baixe o arquivo de coleção do Postman** [aqui][COLECAO_DO_POSTMAN_URL](https://web.postman.co/workspace/409f7473-f1fb-4527-877f-988c4ecc66bd/collection/40242821-0dd90384-710d-4683-8034-dd0f233c0025).
    
 2. **Importe a coleção**:
    - Abra o Postman.
