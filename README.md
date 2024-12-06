@@ -31,4 +31,5 @@ Esta é uma API simples para gerenciamento de produtos em um sistema de vendas o
    git clone https://github.com/Pedororo/FastAPI-Atividades
    cd sistema-vendas-online
 
-   https://web.postman.co/workspace/409f7473-f1fb-4527-877f-988c4ecc66bd/collection/40242821-0dd90384-710d-4683-8034-dd0f233c0025
+##Postman
+https://web.postman.co/workspace/409f7473-f1fb-4527-877f-988c4ecc66bd/collection/40242821-0dd90384-710d-4683-8034-dd0f233c0025
