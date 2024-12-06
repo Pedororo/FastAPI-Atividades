@@ -85,4 +85,4 @@ Este projeto é um sistema simples de vendas de ração para pets utilizando o *
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/sistema-racao-pets.git
+   [git clone https://github.com/seu-usuario/sistema-racao-pets.git](https://github.com/Pedororo/FastAPI-Atividades)
